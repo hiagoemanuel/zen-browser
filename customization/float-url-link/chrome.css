@@ -4,7 +4,7 @@
   }
   
   #statuspanel-label {
-    border-radius: 4px !important;
+    border-radius: 2px !important;
     padding: 2px 10px !important;
     border: 1px solid var(--zen-colors-border) !important;
     background: var(--zen-colors-tertiary) !important;

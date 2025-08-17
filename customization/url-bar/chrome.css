@@ -1,45 +1,62 @@
+:root {
+  --urlbar-transform-translateY: 150px;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--urlbar-transform-translateY)) translateX(-50%);
+  } to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%) !important;
+  }
+}
+
 @-moz-document url-prefix("chrome:") {
-  
+  #urlbar[breakout-extend="true"]  {
+    animation: 0.35s ease up ;
+    border-radius: 8px !important;
+    background-color: #00000040 !important;
+    backdrop-filter: blur(25px) saturate(2) !important;
+  }
+
   /* Blurs the background */
   #urlbar[breakout-extend="true"] #urlbar-background {
-      border: solid 3px color-mix(in hsl, hsl(0 0 50), transparent 90%) !important;
-      border-radius: 15px !important;
-      background-color: color-mix(in hsl, var(--mod-cleanedurlbar-customcolor), transparent var(--mod-cleanedurlbar-customtransparency)) !important;
-      backdrop-filter: blur(25px) saturate(2) !important;
+    border-radius: 8px !important;
+    background-color: transparent !important;
   }
-  
+
   /* Custom URL result selected color */
   .urlbarView-row {
     &[selected] {
-      background-color: var(--mod-cleanedurlbar-customselectcolor) !important;
       color: var(--mod-cleanedurlbar-customselectfontcolor) !important;
     }
   }
-  
+
   /* Unifies the border radius */
   .urlbarView-row {
-    border-radius: 11px !important;
+    border-radius: 8px !important;
   }
-  
+
   /* Deletes the border */
   .urlbarView-body-inner {
      border: none !important;
   }
-  
+
   /* Styles the search options */
   .search-one-offs {
     border-top: none !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     padding: 4px !important;
     margin: 0px 0px 7px 0px !important;
     backdrop-filter: brightness(130%);
   }
-  
+
   .searchbar-engine-one-off-item {
     border-radius: 8px !important;
     margin-right: 3px !important;
   }
-  
+
   #urlbar-anon-search-settings {
     margin-right: 0px !important;
   }

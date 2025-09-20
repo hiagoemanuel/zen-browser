@@ -1,9 +1,30 @@
 #sidebar-box {
-	background-color: #00000040 !important;
   backdrop-filter: blur(25px) saturate(2) !important;
 	border-radius: var(--zen-border-radius) !important;
+	position: absolute !important;
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 8px);
+  z-index: 1 !important;
+  background: #00000040 !important;
+  border: 1px solid var(--zen-colors-border)!important;
+  transition: left 0.35s ease !important;
+}
 
-	position: fixed !important;
-	left: 8px !important;
+#bookmarksPanel, #history-panel {
+  backdrop-filter: blur(25px) saturate(2) !important;
+  background: transparent!important;
+}
 
+#sidebar-splitter {
+	display: block !important
+}
+
+#sidebar-box[hidden="true"] {
+	display: flex !important;
+	left: -325px;
+}
+
+#tabbrowser-tabbox {
+	overflow-x: hidden;
 }

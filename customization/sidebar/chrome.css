@@ -1,0 +1,9 @@
+#sidebar-box {
+	background-color: #00000040 !important;
+  backdrop-filter: blur(25px) saturate(2) !important;
+	border-radius: var(--zen-border-radius) !important;
+
+	position: fixed !important;
+	left: 8px !important;
+
+}

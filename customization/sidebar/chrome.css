@@ -17,7 +17,7 @@
 }
 
 #sidebar-splitter {
-	display: block !important
+	display: none !important;
 }
 
 #sidebar-box[hidden="true"] {
